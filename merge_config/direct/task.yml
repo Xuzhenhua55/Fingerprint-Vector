@@ -1,0 +1,10 @@
+models:
+  - model: TrainedCheckpoint/WizardMath-7B-V1.0/full/if_chat_fp
+    parameters:
+      weight: 0.8
+  - model: meta-llama/Llama-2-7b-chat-hf
+    parameters:
+      weight: 0.2
+merge_method: task_arithmetic
+dtype: float32
+base_model:  meta-llama/Llama-2-7b-hf

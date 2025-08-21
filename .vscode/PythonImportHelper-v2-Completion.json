@@ -1,0 +1,286 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "torch",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch",
+        "description": "torch",
+        "detail": "torch",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "AutoModelForCausalLM",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AutoTokenizer",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "PreTrainedModel",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "yaml",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "yaml",
+        "description": "yaml",
+        "detail": "yaml",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Console",
+        "importPath": "rich.console",
+        "description": "rich.console",
+        "isExtraImport": true,
+        "detail": "rich.console",
+        "documentation": {}
+    },
+    {
+        "label": "Progress",
+        "importPath": "rich.progress",
+        "description": "rich.progress",
+        "isExtraImport": true,
+        "detail": "rich.progress",
+        "documentation": {}
+    },
+    {
+        "label": "Table",
+        "importPath": "rich.table",
+        "description": "rich.table",
+        "isExtraImport": true,
+        "detail": "rich.table",
+        "documentation": {}
+    },
+    {
+        "label": "Style",
+        "importPath": "rich.style",
+        "description": "rich.style",
+        "isExtraImport": true,
+        "detail": "rich.style",
+        "documentation": {}
+    },
+    {
+        "label": "ThreadPoolExecutor",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "isExtraImport": true,
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "as_completed",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "isExtraImport": true,
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "FingerprintVector",
+        "kind": 6,
+        "importPath": "fp_vector_tool",
+        "description": "fp_vector_tool",
+        "peekOfCode": "class FingerprintVector:\n    \"\"\"\n    A utility class for extracting and adding fingerprint vectors (fp_vector).\n    \"\"\"\n    @staticmethod\n    def extract_fp_vector(base_model_path: str, finetuned_model_path: str,\n                          output_path: str) -> None:\n        \"\"\"\n        Extracts the fingerprint vector between a base model and a finetuned model,\n        and saves it to the specified output path.",
+        "detail": "fp_vector_tool",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "fp_vector_tool",
+        "description": "fp_vector_tool",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser(\n        description='Fingerprint Vector Tool: extract or add fp_vector.')\n    subparsers = parser.add_subparsers(dest='command', required=True)\n    # Sub-parser for extracting fingerprint vectors\n    extract_parser = subparsers.add_parser(\n        'extract',\n        help='Extract fingerprint vector from a base and a finetuned model')\n    extract_parser.add_argument('--base_model_path',\n                                type=str,",
+        "detail": "fp_vector_tool",
+        "documentation": {}
+    },
+    {
+        "label": "print_header",
+        "kind": 2,
+        "importPath": "model_merging",
+        "description": "model_merging",
+        "peekOfCode": "def print_header():\n    \"\"\"打印美观的标题\"\"\"\n    table = Table(show_header=True, header_style=\"bold magenta\")\n    table.add_column(\"Timestamp\", width=20)\n    table.add_column(\"Event\", width=50)\n    table.add_column(\"Details\", width=60)\n    console.print(\"\\n\")\n    console.rule(\"[bold cyan]🚀 Model Fusion Processor[/bold cyan]\",\n                 align=\"left\")\n    console.print(",
+        "detail": "model_merging",
+        "documentation": {}
+    },
+    {
+        "label": "log_event",
+        "kind": 2,
+        "importPath": "model_merging",
+        "description": "model_merging",
+        "peekOfCode": "def log_event(status: str, message: str, config: str = \"\"):\n    \"\"\"统一日志记录\"\"\"\n    timestamp = datetime.now().strftime(\"%H:%M:%S\")\n    status_colors = {\n        \"SUCCESS\": \"green\",\n        \"ERROR\": \"red\",\n        \"PROCESSING\": \"blue\",\n        \"WARNING\": \"yellow\"\n    }\n    console.print(f\"[{timestamp}] \"",
+        "detail": "model_merging",
+        "documentation": {}
+    },
+    {
+        "label": "process_config",
+        "kind": 2,
+        "importPath": "model_merging",
+        "description": "model_merging",
+        "peekOfCode": "def process_config(config_path, weight1, progress, task):\n    \"\"\"处理单个配置文件的函数\"\"\"\n    try:\n        with open(config_path, 'r') as f:\n            config = yaml.safe_load(f)\n        model1 = config['models'][0]['model']\n        model2 = config['models'][1]['model']\n        model2_name = os.path.basename(model2)\n        config_name = os.path.splitext(os.path.basename(config_path))[0]\n        log_event(\"PROCESSING\", f\"Processing config: [bold]{config_name}[/]\",",
+        "detail": "model_merging",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "model_merging",
+        "description": "model_merging",
+        "peekOfCode": "def main():\n    print_header()\n    with Progress(transient=True) as progress:\n        task = progress.add_task(\"[cyan]Processing configs...\",\n                                 total=len(config_files) * len(weight_ratios))\n        # 使用ThreadPoolExecutor来并发执行任务\n        with ThreadPoolExecutor(max_workers=2) as executor:\n            futures = []\n            for config_path in config_files:\n                for weight1 in weight_ratios:",
+        "detail": "model_merging",
+        "documentation": {}
+    },
+    {
+        "label": "console",
+        "kind": 5,
+        "importPath": "model_merging",
+        "description": "model_merging",
+        "peekOfCode": "console = Console()\nerror_style = Style(color=\"red\", bold=True)\nsuccess_style = Style(color=\"green\", bold=True)\nwarning_style = Style(color=\"yellow\", bold=True)\n# 配置文件和参数设置\nconfig_files = [\n    \"merge_config/direct/dare_task.yml\", \"merge_config/direct/dare_ties.yml\",\n    \"merge_config/direct/task.yml\", \"merge_config/direct/ties.yml\",\n    \"merge_config/transfered/dare_task.yml\",\n    \"merge_config/transfered/dare_ties.yml\",",
+        "detail": "model_merging",
+        "documentation": {}
+    },
+    {
+        "label": "error_style",
+        "kind": 5,
+        "importPath": "model_merging",
+        "description": "model_merging",
+        "peekOfCode": "error_style = Style(color=\"red\", bold=True)\nsuccess_style = Style(color=\"green\", bold=True)\nwarning_style = Style(color=\"yellow\", bold=True)\n# 配置文件和参数设置\nconfig_files = [\n    \"merge_config/direct/dare_task.yml\", \"merge_config/direct/dare_ties.yml\",\n    \"merge_config/direct/task.yml\", \"merge_config/direct/ties.yml\",\n    \"merge_config/transfered/dare_task.yml\",\n    \"merge_config/transfered/dare_ties.yml\",\n    \"merge_config/transfered/task.yml\", \"merge_config/transfered/ties.yml\"",
+        "detail": "model_merging",
+        "documentation": {}
+    },
+    {
+        "label": "success_style",
+        "kind": 5,
+        "importPath": "model_merging",
+        "description": "model_merging",
+        "peekOfCode": "success_style = Style(color=\"green\", bold=True)\nwarning_style = Style(color=\"yellow\", bold=True)\n# 配置文件和参数设置\nconfig_files = [\n    \"merge_config/direct/dare_task.yml\", \"merge_config/direct/dare_ties.yml\",\n    \"merge_config/direct/task.yml\", \"merge_config/direct/ties.yml\",\n    \"merge_config/transfered/dare_task.yml\",\n    \"merge_config/transfered/dare_ties.yml\",\n    \"merge_config/transfered/task.yml\", \"merge_config/transfered/ties.yml\"\n]",
+        "detail": "model_merging",
+        "documentation": {}
+    },
+    {
+        "label": "warning_style",
+        "kind": 5,
+        "importPath": "model_merging",
+        "description": "model_merging",
+        "peekOfCode": "warning_style = Style(color=\"yellow\", bold=True)\n# 配置文件和参数设置\nconfig_files = [\n    \"merge_config/direct/dare_task.yml\", \"merge_config/direct/dare_ties.yml\",\n    \"merge_config/direct/task.yml\", \"merge_config/direct/ties.yml\",\n    \"merge_config/transfered/dare_task.yml\",\n    \"merge_config/transfered/dare_ties.yml\",\n    \"merge_config/transfered/task.yml\", \"merge_config/transfered/ties.yml\"\n]\nweight_ratios = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]",
+        "detail": "model_merging",
+        "documentation": {}
+    },
+    {
+        "label": "config_files",
+        "kind": 5,
+        "importPath": "model_merging",
+        "description": "model_merging",
+        "peekOfCode": "config_files = [\n    \"merge_config/direct/dare_task.yml\", \"merge_config/direct/dare_ties.yml\",\n    \"merge_config/direct/task.yml\", \"merge_config/direct/ties.yml\",\n    \"merge_config/transfered/dare_task.yml\",\n    \"merge_config/transfered/dare_ties.yml\",\n    \"merge_config/transfered/task.yml\", \"merge_config/transfered/ties.yml\"\n]\nweight_ratios = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]\ndef print_header():\n    \"\"\"打印美观的标题\"\"\"",
+        "detail": "model_merging",
+        "documentation": {}
+    },
+    {
+        "label": "weight_ratios",
+        "kind": 5,
+        "importPath": "model_merging",
+        "description": "model_merging",
+        "peekOfCode": "weight_ratios = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]\ndef print_header():\n    \"\"\"打印美观的标题\"\"\"\n    table = Table(show_header=True, header_style=\"bold magenta\")\n    table.add_column(\"Timestamp\", width=20)\n    table.add_column(\"Event\", width=50)\n    table.add_column(\"Details\", width=60)\n    console.print(\"\\n\")\n    console.rule(\"[bold cyan]🚀 Model Fusion Processor[/bold cyan]\",\n                 align=\"left\")",
+        "detail": "model_merging",
+        "documentation": {}
+    }
+]
