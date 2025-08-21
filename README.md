@@ -112,3 +112,19 @@ python sh/fp_vector_tool.py add \
 - Regenerate the transferred model and re-evaluate both FSR and harmlessness to observe the trade-off between fingerprint strength and model utility.
 
 **Expected Outcome:** Ablation results illustrating how the scaling factor influences fingerprint effectiveness and harmlessness, supporting the tunability of the approach.
+
+## Citation
+
+If you find this work useful, please cite our paper:
+
+```bibtex
+@misc{xu2024fpvecfingerprintinglargelanguage,
+      title={FP-VEC: Fingerprinting Large Language Models via Efficient Vector Addition}, 
+      author={Zhenhua Xu and Wenpeng Xing and Zhebo Wang and Chang Hu and Chen Jie and Meng Han},
+      year={2024},
+      eprint={2409.08846},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR},
+      url={https://arxiv.org/abs/2409.08846}, 
+}
+```
